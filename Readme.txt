@@ -1,19 +1,18 @@
 HƯỚNG DẪN THỰC THI CODE
 -----------------------
-Bước 1: Tải Xampp [https://www.apachefriends.org/index.html]
-Bước 2: Sau khi tải thành công mở Xampp và start Apache và MySQL
-Bước 3: Clone source trên github bằng git cli xuống android studio 
-Bước 4: Chạy chương trình 
+
+Mục đích: Refactor lại code bên version 1.0, đổi backend từ java và sql trong android thành nodejs và postgreSQL
+
+Bước 1: Clone project về
+Bước 2: Mở folder backend, tải nodej, bật ctrl ` hiển thị cửa sổ terminal, npm install, npm start
+Bước 3: Bật terminal window copy local ip của máy về
+Bước 4: Sau khi console hiện log connect database, mở android studio và chạy, sửa đường dẫn api thành ip local của máy giữ nguyên port 3000
 
 CÁC CHỨC NĂNG THỰC HIỆN ĐƯỢC
-+ Đăng nhập:
-+ Đăng ký
++ Refactor đăng nhập, đăng ký
 
 CÁC THƯ VIỆN SỬ DỤNG
--  Thực hiện giao diện menu:
-com.etebarian:meow-bottom-navigation-java:1.2.0
 
-- Thư viện gọi database
-androidx.recyclerview:recyclerview:1.1.0
-androidx.room:room-runtime:2.3.0
-androidx.room:room-compiler:2.3.0
++ retrofit 2, json: dùng cho android studio để gọi api và lấy json
++ express, sequelize: backend nodejs để xây dựng api 
+
