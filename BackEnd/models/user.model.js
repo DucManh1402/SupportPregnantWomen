@@ -58,6 +58,16 @@ module.exports = (sequelize, Sequelize) => {
         type: Sequelize.DATE,
         allowNull: false,
       },
+
+      chieu_cao: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+
+      can_nang: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
     },
     {
       timestamps: false,

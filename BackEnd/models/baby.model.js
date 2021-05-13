@@ -14,21 +14,6 @@ module.exports = (sequelize, Sequelize) => {
         primaryKey: true,
       },
 
-      ngay_sinh: {
-        type: Sequelize.DATE,
-        allowNull: false,
-      },
-
-      chieu_cao: {
-        type: Sequelize.STRING,
-        allowNull: false,
-      },
-
-      can_nang: {
-        type: Sequelize.STRING,
-        allowNull: false,
-      },
-
       tinh_trang_suc_khoe: {
         type: Sequelize.STRING,
         allowNull: false,
