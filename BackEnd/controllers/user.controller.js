@@ -1,20 +1,19 @@
-const uuid = require("uuid");
-const { Op } = require("sequelize");
 const bcrypt = require("bcryptjs");
 
-const User = require("../models/user.model");
+const db = require("../models");
 
+const User = db.user;
 const date = new Date();
 
 //1. Tạo tài khoản
 module.exports.createUser = async (req, res) => {
-  const { email, password } = req.body;
+  const { name, user_id, email, password } = req.body;
 
   await User.create({
-    user_id: uuid.v4(),
+    user_id: user_id,
     email: email,
     password: bcrypt.hashSync(password, 12),
-    name: "",
+    name: name,
     phone: "",
     address: "",
     chu_ki_kinh: 0,
@@ -29,21 +28,13 @@ module.exports.createUser = async (req, res) => {
 
 //2. Lấy thông tin user
 module.exports.getUser = async (req, res) => {
+  const { user_id } = req.body;
+
   const user = await User.findOne({
-    where: { email: req.body.email },
-    // where: {
-    //   [Op.or]: [
-    //     {
-    //       email: req.body.email,
-    //     },
-    //     {
-    //       user_id: req.body.user_id,
-    //     },
-    //   ],
-    // },
+    where: { user_id },
   });
   const rawData = JSON.parse(JSON.stringify(user, null, 4));
 
   const { password, ...rest } = rawData;
-  return res.status(400).send(rest);
+  return res.status(200).send(rest);
 };

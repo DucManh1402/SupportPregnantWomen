@@ -1,11 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 
-const { db } = require("./config/db");
-
-db.authenticate()
-  .then(() => console.log("Connected Database"))
-  .catch((err) => console.log(err.message));
+const db = require("./models");
 
 const app = express();
 app.use(cors());
@@ -17,7 +13,14 @@ const PORT = process.env.PORT || 3000;
 app.use("/api", require("./routes/auth.routes"));
 //2. User routes
 app.use("/api", require("./routes/user.routes"));
+//3. Baby routes
+app.use("/api", require("./routes/baby.routes"));
 
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
+db.sequelize
+  .authenticate()
+  .then(() => {
+    app.listen(PORT, () => {
+      console.log(`Server is running on port ${PORT}`);
+    });
+  })
+  .catch((err) => console.log(err.message));

@@ -1,4 +1,6 @@
-const User = require("../models/user.model");
+const db = require("../models");
+
+const User = db.user;
 
 module.exports.checkEmailDuplicate = async (req, res, next) => {
   const { email } = req.body;
