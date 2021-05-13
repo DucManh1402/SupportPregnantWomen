@@ -28,3 +28,16 @@ module.exports.createBaby = async (req, res) => {
 
   return res.status(200).json({ message: "Tạo em bé thành công" });
 };
+
+//2. Lấy em bé
+module.exports.getBabyById = async (req, res) => {
+  const { user_id } = req.body;
+
+  const baby = await Baby.findOne({
+    where: { user_id },
+  });
+  
+  const rawData = JSON.parse(JSON.stringify(baby, null, 4));
+
+  return res.status(200).send(rawData);
+};
