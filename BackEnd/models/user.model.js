@@ -50,7 +50,7 @@ module.exports = (sequelize, Sequelize) => {
       },
 
       thoi_ki_thai_nghen: {
-        type: Sequelize.DATE,
+        type: Sequelize.STRING,
         allowNull: false,
       },
 

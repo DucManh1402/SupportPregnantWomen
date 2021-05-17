@@ -10,4 +10,7 @@ router.post("/babies", babyController.createBaby);
 //2. lấy baby
 router.post("/babies/get-baby", babyController.getBabyById);
 
+//3. Sửa baby
+router.post("/babies/update-baby", babyController.updateBaby);
+
 module.exports = router;

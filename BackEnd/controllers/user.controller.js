@@ -19,7 +19,7 @@ module.exports.createUser = async (req, res) => {
     chu_ki_kinh: 0,
     thoi_ki_cuoi_cung: date.toISOString().substring(0, 10),
     ngay_lao_dong: date.toISOString().substring(0, 10),
-    thoi_ki_thai_nghen: date.toISOString().substring(0, 10),
+    thoi_ki_thai_nghen: "0, 0",
     ngay_thu_thai: date.toISOString().substring(0, 10),
     can_nang: "0",
     chieu_cao: "0",
@@ -39,4 +39,21 @@ module.exports.getUser = async (req, res) => {
 
   const { password, ...rest } = rawData;
   return res.status(200).send(rest);
+};
+
+//3. Sửa thông tin user
+module.exports.updateUser = (req, res) => {
+  const { user_id } = req.body;
+
+  User.findOne({ where: { user_id } })
+    .then((user) => {
+      Object.keys(req.body).forEach((key) => {
+        user[key] = req.body[key];
+      });
+      return user.save();
+    })
+    .then(() => res.status(200).send({ message: "Thông tin đã được cập nhật" }))
+    .catch((e) => {
+      res.status(500).send(e.message);
+    });
 };

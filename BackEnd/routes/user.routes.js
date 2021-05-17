@@ -15,4 +15,7 @@ router.post(
 //2. Get User
 router.post("/users/get-user", userController.getUser);
 
+//3. Update User
+router.post("/users/update-user", userController.updateUser);
+
 module.exports = router;
