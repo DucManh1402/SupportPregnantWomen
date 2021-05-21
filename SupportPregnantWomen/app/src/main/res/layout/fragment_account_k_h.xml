@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment.AccountKHFragment"
+    android:background="@drawable/backgroup_login">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/annie_use_your_telescope"
+            android:text="Milky"
+            android:textColor="@color/white"
+            android:textSize="45sp"
+            android:textStyle="bold" />
+
+        <ImageView
+        android:layout_width="100dp"
+        android:layout_height="83dp"
+        android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+        android:src="@drawable/logo_pregnancy_white"
+        android:textColor="#fff"
+        android:textSize="3dp"
+        android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:fontFamily="@font/annie_use_your_telescope"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Mom"
+            android:textColor="@color/white"
+            android:textSize="45sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textStyle="bold"
+            android:gravity="fill_vertical"
+            android:text="  Giới Thiệu"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white">
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/account"
+            android:textColor="#fff"
+            android:textSize="3dp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tv_name_user"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="fill_vertical"
+            android:text="Name"
+            android:textColor="@color/black"
+            android:textSize="17dp"
+            android:drawableRight="@drawable/ic_baseline_edit_blue"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"/>
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/white"
+            android:layout_marginTop="3dp">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/baby"
+                android:textColor="#fff"
+                android:textSize="3dp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tv_name_baby"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="fill_vertical"
+                android:text="Name"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                android:drawableRight="@drawable/ic_baseline_edit_blue"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"/>
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textStyle="bold"
+            android:gravity="fill_vertical"
+            android:text="  Tiện ích"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/backgroup_menu_tienich"
+                    android:src="@drawable/ic_outline_info_pink"
+                    android:textColor="#fff"
+                    android:textSize="3dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="68dp"
+                    android:layout_height="43dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:text="Thông tin mẹ bầu"
+                    android:textColor="@color/black"
+                    android:textSize="15dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/backgroup_menu_blue"
+                    android:src="@drawable/ic_outline_bookmark_pink"
+                    android:textColor="#fff"
+                    android:textSize="3dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="43dp"
+                    android:layout_marginLeft="30dp"
+                    android:gravity="center"
+                    android:text="Viết nhật kí"
+                    android:textColor="@color/black"
+                    android:textSize="14dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/backgroup_menu_tienich"
+                    android:src="@drawable/ic_outline_hourglass_empty_pink"
+                    android:textColor="#fff"
+                    android:textSize="3dp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="43dp"
+                    android:layout_marginLeft="30dp"
+                    android:gravity="center"
+                    android:text="Tính cơn gò"
+                    android:textColor="@color/black"
+                    android:textSize="14dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/backgroup_menu_blue"
+                    android:src="@drawable/ic_round_medication_pink"
+                    android:textColor="#fff"
+                    android:textSize="3dp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="43dp"
+                    android:layout_marginLeft="30dp"
+                    android:gravity="center"
+                    android:text="Vật phẩm"
+                    android:textColor="@color/black"
+                    android:textSize="14dp" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/backgroup_menu_tienich"
+                    android:src="@drawable/ic_baseline_more_horiz_pink"
+                    android:textColor="#fff"
+                    android:textSize="3dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="68dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:text="Thay đổi hạn"
+                    android:textColor="@color/black"
+                    android:textSize="15dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+        <Button
+            android:id="@+id/bttdangxuat"
+            android:layout_width="218dp"
+            android:layout_height="?actionBarSize"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/backgroup_btt_signin"
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="Đăng xuất"
+            android:textColor="#e3242b"
+            android:textColorHighlight="@color/material_on_primary_emphasis_medium"
+            android:textColorHint="@color/material_on_primary_emphasis_medium"
+            android:textColorLink="@color/material_on_primary_emphasis_medium"
+            app:backgroundTint="@null" />
+
+    </LinearLayout>
+
+</FrameLayout>

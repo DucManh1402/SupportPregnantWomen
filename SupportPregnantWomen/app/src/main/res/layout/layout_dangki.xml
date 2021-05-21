@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".Controller.DangKiActivity"
     app:hintEnabled="true">
 
     <ImageView
@@ -29,9 +29,10 @@
             android:textColor="#fff"
             android:text="Đăng kí"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            />
         <EditText
-            android:id="@+id/editNameKH"
+            android:id="@+id/editHoTen"
             android:layout_width="match_parent"
             android:layout_height="?actionBarSize"
             android:layout_margin="10dp"
@@ -41,7 +42,8 @@
             android:paddingLeft="10dp"
             android:textColor="@color/white"
             android:textColorHint="@color/white"
-            android:textSize="17sp" />
+            android:textSize="17sp"
+            android:singleLine="true"/>
         <EditText
             android:id="@+id/editGmail"
             android:layout_width="match_parent"
@@ -53,7 +55,8 @@
             android:paddingLeft="10dp"
             android:textColor="@color/white"
             android:textColorHint="@color/white"
-            android:textSize="17sp" />
+            android:textSize="17sp"
+            android:singleLine="true"/>
 
         <EditText
             android:id="@+id/editPass"
@@ -67,7 +70,8 @@
             android:paddingLeft="10dp"
             android:textColor="@color/white"
             android:textColorHint="@color/white"
-            android:textSize="17sp" />
+            android:textSize="17sp"
+            android:singleLine="true"/>
         <EditText
             android:id="@+id/editRe_Pass"
             android:layout_width="match_parent"
@@ -80,7 +84,8 @@
             android:paddingLeft="10dp"
             android:textColor="@color/white"
             android:textColorHint="@color/white"
-            android:textSize="17sp" />
+            android:textSize="17sp"
+            android:singleLine="true"/>
 
         <Button
             android:id="@+id/bttDangKi"

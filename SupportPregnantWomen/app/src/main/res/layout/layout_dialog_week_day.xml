@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardview_shadow_end_color">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="Thời kì thai nghén"
+            android:textColor="#000"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chọn tuần và ngày"
+            android:textColor="#000"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <NumberPicker
+                android:id="@+id/NP_week"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp" />
+
+            <NumberPicker
+                android:id="@+id/NP_day"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/bttChonXong"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:layout_margin="10dp"
+            android:background="@drawable/backgroup_btt_signin"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="Chọn xong"
+            android:textColor="#e03fd8"
+            android:textColorHighlight="@color/material_on_primary_emphasis_medium"
+            android:textColorHint="@color/material_on_primary_emphasis_medium"
+            android:textColorLink="@color/material_on_primary_emphasis_medium"
+            app:backgroundTint="?android:attr/textColorHintInverse" />
+    </LinearLayout>
+</RelativeLayout>

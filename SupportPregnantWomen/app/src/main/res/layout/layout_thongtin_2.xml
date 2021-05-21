@@ -1,9 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Controller.ThongTin2Activity">
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -14,7 +15,7 @@
 
     <LinearLayout
 
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
@@ -27,11 +28,36 @@
             android:textColor="#fff"
             android:textSize="25sp"
             android:textStyle="bold" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="Chu kì kinh trung bình:"
+                android:textColor="#fff"
+                android:textSize="17sp" />
+
+            <Spinner
+                android:id="@+id/spndaychuki"
+                android:layout_width="52dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="30dp"
+                android:background="@drawable/backgroup_calendar"
+                android:foregroundGravity="center"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+        </LinearLayout>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20sp"
+            android:layout_marginTop="20dp"
             android:gravity="center"
             android:text="Bắt đầu của thời kì cuối cùng"
             android:textColor="#fff"
@@ -71,12 +97,12 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20sp"
             android:gravity="center"
-            android:text="Ngày thai nghén"
+            android:text="Thời kì thai nghén"
             android:textColor="#fff"
             android:textSize="17sp"
             />
         <Button
-            android:id="@+id/btnspnngaythainghen"
+            android:id="@+id/btnspntkthainghen"
             android:layout_width="274dp"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
@@ -106,16 +132,15 @@
             app:backgroundTint="@null" />
     </LinearLayout>
     <Button
-        android:id="@+id/bttTiepTucTrangThongTin1"
+        android:id="@+id/bttTiepTucTrangThongTin2"
         android:layout_width="match_parent"
         android:layout_height="?actionBarSize"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="20dp"
         android:layout_margin="20dp"
         android:background="@drawable/backgroup_btt_signin"
-
         android:drawableRight="@drawable/ic_baseline_chevron_right"
-        android:gravity=""
+        android:gravity="fill_vertical"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
         android:text="Tiếp tục"
