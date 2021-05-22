@@ -1,1 +1,30 @@
-Phiên bản 2.0
+HƯỚNG DẪN THỰC THI CODE
+-----------------------
+
+Mục đích: Xây dựng hoàn thiện tiếp dự án
+
+Bước 1: Clone project từ git về
+Bước 2: Mở folder backend, tải nodej (nếu chưa cài), bật ctrl ` hiển thị cửa sổ terminal trong vscode, thực hiện lệnh npm install, npm start để chạy api.
+Bước 3: Bật terminal window copy local ip của máy về.
+Bước 4: Sau khi console hiện log connect database, mở android studio và chạy, sửa đường dẫn api thành ip local của máy giữ nguyên port 3000.
+
+CÁC CHỨC NĂNG THỰC HIỆN ĐƯỢC
++ Đăng nhập,
++ Đăng kí
++ Tạo em bé
++ Nhập thông tin (tính toán từ ngày "Bắt đầu của thời kì cuối cùng" cho ra ngày lao động, ngày thụ thai, thời kì thai nghén)
++ Hiện thị thông tin user và em bé
++ Edit thông tin user và em bé
++ Bảo mật mật khẩu qua Bycryptjs
++ Bắt lỗi chức năng, validate.
+
+CÁC THƯ VIỆN SỬ DỤNG
+
++ bcryptjs: hash password.
++ cors: open api kết nối.
++ express: framework backend.
++ uuid: tạo uuid.
++ sequelize, pg-hstore, pg: tạo model tương tác với csdl,
++ com.google.code.gson:gson:2.8.6, com.squareup.retrofit2:retrofit:2.1.0, com.squareup.retrofit2:converter-gson:2.1.0: gọi api và format json.
++ 'com.google.android.material:material:1.3.0: thư viện icon.
+

@@ -3,7 +3,6 @@ package com.example.test.Model;
 import com.google.gson.annotations.SerializedName;
 
 public class Babies {
-
     @SerializedName("baby_id")
     private String baby_id;
     @SerializedName("user_id")
@@ -23,10 +22,20 @@ public class Babies {
         this.tinh_trang_suc_khoe = tinh_trang_suc_khoe;
     }
 
-    public Babies(String user_id, String name, String tinh_trang_suc_khoe,String gender) {
+    public Babies( String user_id, String name, String gender, String tinh_trang_suc_khoe) {
+    
         this.user_id = user_id;
         this.name = name;
+        this.gender = gender;
         this.tinh_trang_suc_khoe = tinh_trang_suc_khoe;
+    }
+
+    public String getBaby_id() {
+        return baby_id;
+    }
+
+    public void setBaby_id(String baby_id) {
+        this.baby_id = baby_id;
     }
 
     public String getUser_id() {

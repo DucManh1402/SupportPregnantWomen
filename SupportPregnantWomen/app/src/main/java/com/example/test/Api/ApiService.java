@@ -1,6 +1,7 @@
 package com.example.test.Api;
 
 import com.example.test.Model.Babies;
+import com.example.test.Model.HandleError;
 import com.example.test.Model.User;
 
 import java.util.HashMap;
@@ -26,13 +27,16 @@ public interface ApiService {
     @POST("api/users/update-user")
     Call<User> UpdateUser(@Body HashMap<String, String>map);
 
+    @POST("api/users/update-password")
+    Call<HandleError> UpdatePassUser(@Body HashMap<String, String>map);
+
     @POST("api/babies/update-baby")
     Call<Babies> UpdateBaby(@Body HashMap<String, String>map);
 
     @POST("api/babies")
     Call<Babies> insertBaby(@Body HashMap<String, String>map);
 
-    @POST("api/users/get-baby")
+    @POST("api/babies/get-baby")
     Call<Babies> getBaby(@Body HashMap<String, String>map);
 
 }

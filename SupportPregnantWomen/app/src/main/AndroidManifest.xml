@@ -24,7 +24,10 @@
         <activity android:name=".Controller.DangKiActivity"/>
         <activity android:name=".Controller.QuenMatKhauActivity"/>
         <activity android:name=".Controller.TrangChuActivity"/>
-        <activity android:name=".Controller.Edit_thongtin_user"/>
+        <activity android:name=".Controller.Edit_thongtin_user"
+            android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar"/>
+        <activity android:name=".Controller.EditBabyActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar"/>
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

@@ -12,6 +12,7 @@ import com.example.test.Fragment.AccountKHFragment;
 import com.example.test.Fragment.ClockFragment;
 import com.example.test.Fragment.HomeFragment;
 import com.example.test.Fragment.MenuFragment;
+import com.example.test.Model.GlobalsUser;
 import com.example.test.R;
 
 
@@ -59,18 +60,49 @@ public class TrangChuActivity extends AppCompatActivity {
         //set HOME
 //        bottomNavigation.setCount(2,"10");
         // set home fragment initially selected
-        bottomNavigation.show(2,true);
+        bottomNavigation.show(GlobalsUser.getNumber_Co(),true);
         bottomNavigation.setOnClickMenuListener(new MeowBottomNavigation.ClickListener() {
             @Override
             public void onClickItem(MeowBottomNavigation.Model item) {
+                if(item.getId()==1)
+                {
+                    Toast.makeText(getApplicationContext(),"Trang chủ",Toast.LENGTH_SHORT).show();
+                }
                 //Display toast
-                Toast.makeText(getApplicationContext(),"nút"+ item.getId(),Toast.LENGTH_SHORT).show();
+                if(item.getId()==2)
+                {
+                    Toast.makeText(getApplicationContext(),"Thông tin cần thiết",Toast.LENGTH_SHORT).show();
+                }
+                if(item.getId()==3)
+                {
+                    Toast.makeText(getApplicationContext(),"Bộ đếm",Toast.LENGTH_SHORT).show();
+                }
+                if(item.getId()==4)
+                {
+                    Toast.makeText(getApplicationContext(),"Cài đặt",Toast.LENGTH_SHORT).show();
+                }
             }
         });
         bottomNavigation.setOnReselectListener(new MeowBottomNavigation.ReselectListener() {
             @Override
             public void onReselectItem(MeowBottomNavigation.Model item) {
-                Toast.makeText(getApplicationContext(),"nút"+ item.getId(),Toast.LENGTH_SHORT).show();
+                if(item.getId()==1)
+                {
+                    Toast.makeText(getApplicationContext(),"Trang chủ",Toast.LENGTH_SHORT).show();
+                }
+                //Display toast
+                if(item.getId()==2)
+                {
+                    Toast.makeText(getApplicationContext(),"Thông tin cần thiết",Toast.LENGTH_SHORT).show();
+                }
+                if(item.getId()==3)
+                {
+                    Toast.makeText(getApplicationContext(),"Bộ đếm",Toast.LENGTH_SHORT).show();
+                }
+                if(item.getId()==4)
+                {
+                    Toast.makeText(getApplicationContext(),"Cài đặt",Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }

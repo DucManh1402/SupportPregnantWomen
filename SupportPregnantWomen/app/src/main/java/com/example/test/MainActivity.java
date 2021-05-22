@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
                             Toast.makeText(MainActivity.this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
 
                             GlobalsUser.setGlobalUserId(response.body().getUser_id());
-
+                            GlobalsUser.setNumber_Co(1);
                             Intent intent=new Intent(MainActivity.this, TrangChuActivity.class);
                             startActivity(intent);
                         }

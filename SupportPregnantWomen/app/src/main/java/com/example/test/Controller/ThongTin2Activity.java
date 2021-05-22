@@ -98,7 +98,7 @@ public class ThongTin2Activity extends AppCompatActivity {
 
                 if(response.code() == 200){
                     Toast.makeText(ThongTin2Activity.this, "Cập nhập thành công", Toast.LENGTH_SHORT).show();
-
+                    GlobalsUser.setNumber_Co(1);
                     Intent intent = new Intent(ThongTin2Activity.this, TrangChuActivity.class);
                     startActivity(intent);
                 }
