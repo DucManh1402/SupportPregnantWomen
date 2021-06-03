@@ -25,6 +25,9 @@ db.sequelize = sequelize;
 
 db.user = require("./user.model")(sequelize, Sequelize);
 db.baby = require("./baby.model")(sequelize, Sequelize);
+db.diary = require("./diary.model")(sequelize, Sequelize);
+db.knowledge = require("./knowledge.model")(sequelize, Sequelize);
+db.schedule = require("./schedule.model")(sequelize, Sequelize);
 
 //Associate
 db.user.hasOne(db.baby, { foreignKey: "user_id", as: "baby" });

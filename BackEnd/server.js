@@ -16,6 +16,10 @@ app.use("/api", require("./routes/user.routes"));
 //3. Baby routes
 app.use("/api", require("./routes/baby.routes"));
 
+app.use("/api", require("./routes/diary.routes"));
+
+app.use("/api", require("./routes/schedule.routes"));
+
 db.sequelize
   .authenticate()
   .then(() => {

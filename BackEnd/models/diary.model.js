@@ -20,7 +20,7 @@ module.exports = (sequelize, Sequelize) => {
       },
 
       date_diary: {
-        type: Sequelize.DATE,
+        type: Sequelize.DATEONLY,
         allowNull: false,
       },
     },

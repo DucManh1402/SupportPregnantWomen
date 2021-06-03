@@ -15,12 +15,12 @@ module.exports = (sequelize, Sequelize) => {
       },
 
       ngay_kham: {
-        type: Sequelize.DATE,
+        type: Sequelize.DATEONLY,
         allowNull: false,
       },
 
       ngay_tai_kham: {
-        type: Sequelize.DATE,
+        type: Sequelize.DATEONLY,
         allowNull: false,
       },
 
