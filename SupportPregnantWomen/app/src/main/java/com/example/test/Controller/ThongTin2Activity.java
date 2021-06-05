@@ -35,8 +35,8 @@ import retrofit2.Response;
 
 public class ThongTin2Activity extends AppCompatActivity {
 
-    Spinner spinner;
-    TextView userId;
+    NumberPicker np_daychuki;
+
     Button bttTiepTuc;
     Button btnspnthoikycuoicung;
     private int mYear, mMonth, mDay;
@@ -87,7 +87,7 @@ public class ThongTin2Activity extends AppCompatActivity {
         map.put("thoi_ki_cuoi_cung",btnspnthoikycuoicung.getText().toString());
         map.put("ngay_lao_dong",btnspnngaylaodong.getText().toString());
         map.put("ngay_thu_thai",btnspnngaythuthai.getText().toString());
-        map.put("chu_ki_kinh",spinner.getSelectedItem().toString());
+        map.put("chu_ki_kinh", String.valueOf(np_daychuki.getValue()));
         map.put("thoi_ki_thai_nghen",btnspnthoikithainghen.getText().toString());
         map.put("can_nang","1");
         map.put("chieu_cao","1");
@@ -219,25 +219,20 @@ public void chon_ngay_tkcc()
     }
     public boolean test(){
 
-        if (spinner.getSelectedItem().toString().isEmpty()) {
-            Toast.makeText(getApplicationContext(), "Hãy nhập chu kì kinh", Toast.LENGTH_SHORT).show();
+        if (btnspnthoikithainghen.getText().toString().isEmpty()) {
+            Toast.makeText(getApplicationContext(), "Hãy nhập thời kì thai nghén", Toast.LENGTH_SHORT).show();
             return false;
         }
         return true;
     }
     private void Chukikinh(){
-        ArrayList<Integer> listChuKi= new ArrayList<Integer>();
-        for (int i = 25; i < 41; i++) {
-            listChuKi.add(i);
-        }
-        ArrayAdapter arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item,listChuKi);
-        spinner.setAdapter(arrayAdapter);
-//        spinner.setOnItemSelectedListener(this);
+        np_daychuki.setMinValue(25);
+        np_daychuki.setMaxValue(40);
     }
     private void AnhXa() {
 
         bttTiepTuc = findViewById(R.id.bttTiepTucTrangThongTin1);
-        spinner  = findViewById(R.id.spndaychuki);
+        np_daychuki  = findViewById(R.id.npdaychuki);
         btnspnthoikycuoicung = findViewById(R.id.btnspnthoikycuoicung);
         btnspnngaylaodong = findViewById(R.id.btnspnngaylaodong);
         btnspnthoikithainghen = findViewById(R.id.btnspntkthainghen);

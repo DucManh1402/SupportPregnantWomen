@@ -74,7 +74,7 @@ private String Baby_id;
             public void onClick(View v) {
                 GlobalsUser.setNumber_Co(4);
                 Intent myIntent = new Intent(getApplicationContext(), TrangChuActivity.class);
-                startActivityForResult(myIntent, 0);
+                startActivityForResult(myIntent, 1);
             }
         });
     }

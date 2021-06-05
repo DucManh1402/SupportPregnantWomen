@@ -22,7 +22,6 @@
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="20dp"
-
             android:layout_marginBottom="10dp"
             android:fontFamily="@font/annie_use_your_telescope"
             android:text="Milky"
@@ -140,6 +139,7 @@
                 android:orientation="vertical">
 
                 <ImageView
+                    android:id="@+id/iv_thongtin"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_marginLeft="30dp"
@@ -168,6 +168,7 @@
                 android:orientation="vertical">
 
                 <ImageView
+                    android:id="@+id/imageNhatKi"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_marginLeft="35dp"

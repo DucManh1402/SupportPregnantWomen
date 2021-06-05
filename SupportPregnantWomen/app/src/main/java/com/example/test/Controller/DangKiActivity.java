@@ -50,6 +50,7 @@ public class DangKiActivity extends AppCompatActivity {
                 handleSignUpDialog();
             }
         });
+
     }
     private void handleSignUpDialog() {
         AnhXa();

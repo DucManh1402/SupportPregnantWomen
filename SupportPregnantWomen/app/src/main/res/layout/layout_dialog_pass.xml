@@ -67,12 +67,13 @@
             android:textColorHint="@color/black"
             android:textSize="17sp" />
     </LinearLayout>
+
     <Button
         android:id="@+id/bttQuayLai_Pass"
         android:layout_width="wrap_content"
         android:layout_height="?actionBarSize"
-        android:layout_alignParentLeft="true"
         android:layout_below="@id/linearPass"
+        android:layout_alignParentLeft="true"
         android:layout_marginStart="5dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="0dp"
@@ -86,16 +87,16 @@
         android:text="Quay lại "
         android:textColor="#e3242b"
         android:textColorHighlight="@color/material_on_primary_emphasis_medium"
-        app:backgroundTint="@null" />
+        app:backgroundTint="?android:attr/textColorHintInverse" />
 
     <Button
         android:id="@+id/bttThayDoi_Pass"
         android:layout_width="wrap_content"
         android:layout_height="?actionBarSize"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="5dp"
         android:layout_below="@id/linearPass"
         android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
         android:background="@drawable/backgroup_btt_signin"
         android:drawableRight="@drawable/ic_baseline_chevron_right"
         android:gravity="fill_vertical"
@@ -104,6 +105,5 @@
         android:text=" Thay đổi"
         android:textColor="#008000"
         android:textColorHighlight="@color/material_on_primary_emphasis_medium"
-        app:backgroundTint="@null"
- />
+        app:backgroundTint="?android:attr/textColorHintInverse" />
 </RelativeLayout>

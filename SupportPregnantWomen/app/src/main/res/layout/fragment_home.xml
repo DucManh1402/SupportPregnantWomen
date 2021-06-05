@@ -1,14 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragment.HomeFragment">
+    tools:context=".Fragment.HomeFragment"
+    android:background="@drawable/backgroup_login">
+
+ <LinearLayout
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:orientation="vertical"
+     android:layout_marginTop="10dp"
+     android:layout_alignParentRight="true"
+     >
+  <TextView
+      android:id="@+id/tv_cc"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:gravity="fill_vertical"
+      android:text="0,1 m"
+      android:textColor="@color/white"
+      android:textSize="25dp"
+      android:textStyle="bold"
+      android:paddingLeft="10dp"
+      android:paddingRight="5dp" />
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:gravity="fill_vertical"
+      android:text="Chiều cao"
+      android:layout_marginRight="10dp"
+      android:textColor="#f0ffff"
+      android:textSize="17dp"
+      android:paddingLeft="10dp"
+      android:paddingRight="5dp" />
+ </LinearLayout>
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:orientation="vertical"
+
+     >
+ <LinearLayout
+
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:orientation="vertical"
+     android:layout_marginTop="10dp"
+     >
+  <TextView
+      android:id="@+id/tv_cn"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:gravity="fill_vertical"
+      android:text="0,1 g"
+      android:textColor="@color/white"
+      android:textSize="25dp"
+      android:textStyle="bold"
+      android:paddingLeft="10dp"
+      android:paddingRight="5dp" />
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:gravity="fill_vertical"
+      android:text="Cân nặng"
+      android:textColor="#f0ffff"
+      android:textSize="17dp"
+      android:paddingLeft="10dp"
+      android:paddingRight="5dp" />
+  <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:layout_marginBottom="10dp">
+  <TextView
+      android:layout_marginTop="10dp"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:gravity="fill_vertical"
+      android:text="Tuần tuổi: "
+      android:textColor="@color/white"
+      android:textSize="20dp"
+      android:textStyle="bold"
+      android:paddingLeft="10dp" />
+   <TextView
+       android:layout_marginTop="10dp"
+       android:id="@+id/tv_tuantuoi"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:gravity="fill_vertical"
+       android:text="1"
+       android:textColor="@color/white"
+       android:textSize="20dp"
+       android:textStyle="bold" />
+ </LinearLayout>
+ </LinearLayout>
+
+
+ <ImageView
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+     android:src="@drawable/babycute"/>
 
  <androidx.recyclerview.widget.RecyclerView
      android:id="@+id/list_week"
      android:layout_width="match_parent"
-     android:layout_height="wrap_content"/>
+     android:layout_height="wrap_content"
+/>
 
+ </LinearLayout>
 
-</FrameLayout>
+</RelativeLayout>

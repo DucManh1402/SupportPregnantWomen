@@ -6,20 +6,17 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.test.Controller.EditBabyActivity;
 import com.example.test.Controller.Edit_thongtin_user;
-import com.example.test.Controller.ThongTin2Activity;
-import com.example.test.Controller.ThongTinActivity;
-import com.example.test.Controller.TrangChuActivity;
 import com.example.test.MainActivity;
 import com.example.test.Model.Babies;
 import com.example.test.Model.GlobalsUser;
@@ -27,18 +24,18 @@ import com.example.test.Model.User;
 import com.example.test.NguonApi;
 import com.example.test.R;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-
+import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
 
 public class AccountKHFragment extends Fragment {
     TextView textView_name_user,textView_name_baby;
     Button bttDangxuat;
     NguonApi nguonApi = new NguonApi();
+    ImageView imageViewThongtin,imageViewVietNK;
 
     @Nullable
     @Override
@@ -72,13 +69,25 @@ public class AccountKHFragment extends Fragment {
                 startActivity(intent);
             }
         });
+        imageViewThongtin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                loadFragment(new MenuFragment());
+            }
+        });
 
+        imageViewVietNK.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                loadFragment(new DiaryFragment());
+            }
+        });
         return view;
     }
     private void hash(){
         HashMap<String, String> map = new HashMap<>();
 
-        map.put("user_id", "1d05de85-a6fd-4ea2-a5c9-505e5b4106a9");
+        map.put("user_id", GlobalsUser.getGlobalUserId());
         //lấy user
         Call<User> call = nguonApi.apiService.getUser(map);
         call.enqueue(new Callback<User>() {
@@ -97,7 +106,6 @@ public class AccountKHFragment extends Fragment {
         });
 
         //lấy baby
-
         Call<Babies> call1 = nguonApi.apiService.getBaby(map);
         call1.enqueue(new Callback<Babies>() {
             @Override
@@ -121,5 +129,17 @@ public class AccountKHFragment extends Fragment {
         textView_name_user = view.findViewById(R.id.tv_name_user);
         textView_name_baby = view.findViewById(R.id.tv_name_baby);
         bttDangxuat = view.findViewById(R.id.bttdangxuat);
+        imageViewThongtin = view.findViewById(R.id.iv_thongtin);
+        imageViewVietNK = view.findViewById(R.id.imageNhatKi);
     }
+    private void loadFragment(Fragment fragment) {
+        //replace
+        getFragmentManager()
+                .beginTransaction()
+                .replace(R.id.frame_layout,fragment)
+                .commit();
+
+    }
+
+
 }

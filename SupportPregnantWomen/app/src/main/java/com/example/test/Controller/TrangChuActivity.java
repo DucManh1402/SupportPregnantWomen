@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment;
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
 import com.example.test.Fragment.AccountKHFragment;
 import com.example.test.Fragment.ClockFragment;
+import com.example.test.Fragment.DiaryFragment;
 import com.example.test.Fragment.HomeFragment;
 import com.example.test.Fragment.MenuFragment;
 import com.example.test.Model.GlobalsUser;
@@ -52,6 +53,9 @@ public class TrangChuActivity extends AppCompatActivity {
                     case 4:
                         fragment = new AccountKHFragment();
                         break;
+                    case 5:
+                        fragment = new DiaryFragment();
+                        break;
                 }
                 //Load
                 loadFragment(fragment);
@@ -60,7 +64,8 @@ public class TrangChuActivity extends AppCompatActivity {
         //set HOME
 //        bottomNavigation.setCount(2,"10");
         // set home fragment initially selected
-        bottomNavigation.show(GlobalsUser.getNumber_Co(),true);
+       bottomNavigation.show(GlobalsUser.getNumber_Co(),true);
+//        bottomNavigation.show(2,true);
         bottomNavigation.setOnClickMenuListener(new MeowBottomNavigation.ClickListener() {
             @Override
             public void onClickItem(MeowBottomNavigation.Model item) {
@@ -113,7 +118,6 @@ public class TrangChuActivity extends AppCompatActivity {
                 .beginTransaction()
                 .replace(R.id.frame_layout,fragment)
                 .commit();
-
     }
 
     private void ghep(){
