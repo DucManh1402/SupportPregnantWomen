@@ -7,12 +7,14 @@ const Diary = db.diary;
 
 // Tạo nhật ký
 module.exports.createDiary = async (req, res) => {
-  const { user_id, content } = req.body;
+  const { user_id, content, title, subtitle } = req.body;
 
   await Diary.create({
     diary_id: uuid.v4(),
     user_id: user_id,
     content: content,
+    title: title,
+    subtitle: subtitle,
     date_diary: moment().format("YYYY-MM-DD"),
   });
 
@@ -29,7 +31,7 @@ module.exports.getAllDiary = async (req, res) => {
 
   const rawData = JSON.parse(JSON.stringify(diary, null, 4));
 
-  return res.status(200).send(rawData);
+  return res.status(200).send({ list: rawData });
 };
 
 // Lấy nhật ký theo ngày

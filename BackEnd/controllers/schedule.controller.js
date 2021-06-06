@@ -30,7 +30,7 @@ module.exports.getAllSchedule = async (req, res) => {
 
   const rawData = JSON.parse(JSON.stringify(diary, null, 4));
 
-  return res.status(200).send(rawData);
+  return res.status(200).send({ list: rawData });
 };
 
 // Lấy lịch khám theo ngày tái khám

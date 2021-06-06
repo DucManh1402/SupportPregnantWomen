@@ -10,7 +10,6 @@ import androidx.fragment.app.Fragment;
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
 import com.example.test.Fragment.AccountKHFragment;
 import com.example.test.Fragment.ClockFragment;
-import com.example.test.Fragment.DiaryFragment;
 import com.example.test.Fragment.HomeFragment;
 import com.example.test.Fragment.MenuFragment;
 import com.example.test.Model.GlobalsUser;
@@ -53,9 +52,7 @@ public class TrangChuActivity extends AppCompatActivity {
                     case 4:
                         fragment = new AccountKHFragment();
                         break;
-                    case 5:
-                        fragment = new DiaryFragment();
-                        break;
+
                 }
                 //Load
                 loadFragment(fragment);

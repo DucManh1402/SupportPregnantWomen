@@ -19,6 +19,16 @@ module.exports = (sequelize, Sequelize) => {
         allowNull: false,
       },
 
+      title: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+
+      subtitle: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+
       date_diary: {
         type: Sequelize.DATEONLY,
         allowNull: false,

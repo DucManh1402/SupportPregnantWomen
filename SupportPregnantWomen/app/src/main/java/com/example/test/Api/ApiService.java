@@ -1,19 +1,17 @@
 package com.example.test.Api;
 
 import com.example.test.Model.Babies;
+import com.example.test.Model.Diary;
 import com.example.test.Model.HandleError;
-import com.example.test.Model.Note;
 import com.example.test.Model.User;
 
 import java.util.HashMap;
+import java.util.List;
 
 import retrofit2.Call;
 
-import retrofit2.http.Field;
-import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Body;
-import retrofit2.http.Query;
 
 public interface ApiService {
 
@@ -44,15 +42,22 @@ public interface ApiService {
     Call<Babies> getBaby(@Body HashMap<String, String>map);
 
     //Diary
-    @POST("api/diaries/get-diaries")
-    Call<Note> getDiary(@Body HashMap<String, String>map);
 
+    @POST("api/diaries")
+    Call<Diary> addDiary(@Body HashMap<String, String>map);
+
+    //lấy all nhật kí
+    @POST("api/diaries/get-diaries")
+    Call<List<Diary>> getDiaries(@Body HashMap<String, String>map);
+//    Call<Diary> getDiaries(@Body HashMap<String, String>map);
+
+    //lấy 1 nhật kí
     @POST("api/diaries/get-diary")
-    Call<Note> getDiaryDay(@Body HashMap<String, String>map);
+    Call<Diary> getDiary_Day(@Body HashMap<String, String>map);
 
     @POST("api/diaries/update-diary")
-    Call<Note> UpdateDiary(@Body HashMap<String, String>map);
+    Call<Diary> UpdateDiary(@Body HashMap<String, String>map);
 
     @POST("api/diaries/delete-diary")
-    Call<Note> DeleteDiary(@Body HashMap<String, String>map);
+    Call<Diary> DeleteDiary(@Body HashMap<String, String>map);
 }

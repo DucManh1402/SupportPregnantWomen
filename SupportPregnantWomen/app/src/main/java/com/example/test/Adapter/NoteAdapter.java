@@ -8,17 +8,17 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.test.Model.Note;
+import com.example.test.Model.Diary;
 import com.example.test.R;
 
 import java.util.List;
 
 public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.NoteViewHolder >{
 
-    private List<Note> notes;
-    public NoteAdapter(List<Note> notes)
+    private List<Diary> diaries;
+    public NoteAdapter(List<Diary> diaries)
     {
-        this.notes = notes;
+        this.diaries = diaries;
     }
 
     @NonNull
@@ -31,12 +31,12 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.NoteViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull  NoteAdapter.NoteViewHolder holder, int position) {
-        holder.setNote(notes.get(position));
+        holder.setNote(diaries.get(position));
     }
 
     @Override
     public int getItemCount() {
-        return notes.size();
+        return diaries.size();
     }
 
     @Override
@@ -53,9 +53,14 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.NoteViewHolder
             textSubtitle = itemView.findViewById(R.id.txt_subtitle);
             textDateTime = itemView.findViewById(R.id.txt_datetime);
         }
-        void setNote(Note note){
-            textTilte.setText(note.getContent());
-            textDateTime.setText(note.getDate_diary());
+        void setNote(Diary diary){
+            textTilte.setText(diary.getTitle());
+            if(diary.getSubtitle().trim().isEmpty()){
+                textSubtitle.setVisibility(View.GONE);
+            }else {
+                textSubtitle.setText(diary.getSubtitle());
+            }
+            textDateTime.setText(diary.getDate_diary());
         }
     }
 }

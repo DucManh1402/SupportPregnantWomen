@@ -15,6 +15,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.test.Controller.DiaryFragment;
 import com.example.test.Controller.EditBabyActivity;
 import com.example.test.Controller.Edit_thongtin_user;
 import com.example.test.MainActivity;
@@ -29,7 +30,6 @@ import java.util.HashMap;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
 
 public class AccountKHFragment extends Fragment {
     TextView textView_name_user,textView_name_baby;
@@ -79,7 +79,8 @@ public class AccountKHFragment extends Fragment {
         imageViewVietNK.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                loadFragment(new DiaryFragment());
+                Intent intent = new Intent(getContext(), DiaryFragment.class);
+                startActivity(intent);
             }
         });
         return view;
