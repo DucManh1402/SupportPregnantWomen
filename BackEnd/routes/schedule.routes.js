@@ -10,6 +10,8 @@ router.post("/schedules", scheduleController.createSchedule);
 //2. lấy nhật ký theo ngày
 router.post("/schedules/get-schedule", scheduleController.getScheduleByDate);
 
+router.post("/schedules/get-scheduleid", scheduleController.getScheduleByID);
+
 //3. Lấy hết
 router.post("/schedules/get-schedules", scheduleController.getAllSchedule);
 

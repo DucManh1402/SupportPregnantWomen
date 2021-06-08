@@ -46,6 +46,19 @@ module.exports.getScheduleByDate = async (req, res) => {
   return res.status(200).send(rawData);
 };
 
+// Lấy lịch khám theo id
+module.exports.getScheduleByID = async (req, res) => {
+  const { user_id, schedule_id } = req.body;
+
+  const schedule = await Schedule.findOne({
+    where: { user_id, schedule_id },
+  });
+
+  const rawData = JSON.parse(JSON.stringify(schedule, null, 4));
+
+  return res.status(200).send(rawData);
+};
+
 // Xoá lịch khám theo ngày
 module.exports.deleteSchedule = async (req, res) => {
   const { user_id, schedule_id } = req.body;

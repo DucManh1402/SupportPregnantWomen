@@ -47,6 +47,19 @@ module.exports.getDiaryByDate = async (req, res) => {
   return res.status(200).send(rawData);
 };
 
+// Lấy nhật ký theo id
+module.exports.getDiaryByID = async (req, res) => {
+  const { user_id, diary_id } = req.body;
+
+  const diary = await Diary.findOne({
+    where: { user_id, diary_id },
+  });
+
+  const rawData = JSON.parse(JSON.stringify(diary, null, 4));
+
+  return res.status(200).send(rawData);
+};
+
 // Xoá nhật ký theo ngày
 module.exports.deleteDiaryByDate = async (req, res) => {
   const { user_id, date_diary } = req.body;
