@@ -48,10 +48,10 @@ module.exports.getScheduleByDate = async (req, res) => {
 
 // Lấy lịch khám theo id
 module.exports.getScheduleByID = async (req, res) => {
-  const { user_id, schedule_id } = req.body;
+  const { schedule_id } = req.body;
 
   const schedule = await Schedule.findOne({
-    where: { user_id, schedule_id },
+    where: { schedule_id },
   });
 
   const rawData = JSON.parse(JSON.stringify(schedule, null, 4));

@@ -49,10 +49,10 @@ module.exports.getDiaryByDate = async (req, res) => {
 
 // Lấy nhật ký theo id
 module.exports.getDiaryByID = async (req, res) => {
-  const { user_id, diary_id } = req.body;
+  const { diary_id } = req.body;
 
   const diary = await Diary.findOne({
-    where: { user_id, diary_id },
+    where: { diary_id },
   });
 
   const rawData = JSON.parse(JSON.stringify(diary, null, 4));
