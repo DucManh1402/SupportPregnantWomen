@@ -10,7 +10,7 @@ router.post("/diaries", diaryController.createDiary);
 //2. lấy nhật ký theo ngày
 router.post("/diaries/get-diary", diaryController.getDiaryByDate);
 
-router.post("/diaries/get-dairyid", diaryController.getDiaryByID);
+router.post("/diaries/get-diaryid", diaryController.getDiaryByID);
 
 //3. Lấy hết
 router.post("/diaries/get-diaries", diaryController.getAllDiary);
