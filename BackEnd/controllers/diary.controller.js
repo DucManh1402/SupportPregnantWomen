@@ -36,10 +36,10 @@ module.exports.getAllDiary = async (req, res) => {
 
 // Lấy nhật ký theo ngày
 module.exports.getDiaryByDate = async (req, res) => {
-  const { user_id, date_diary } = req.body;
+  const { date_diary } = req.body;
 
   const diary = await Diary.findOne({
-    where: { user_id, date_diary },
+    where: { date_diary },
   });
 
   const rawData = JSON.parse(JSON.stringify(diary, null, 4));
@@ -62,10 +62,10 @@ module.exports.getDiaryByID = async (req, res) => {
 
 // Xoá nhật ký theo ngày
 module.exports.deleteDiaryByDate = async (req, res) => {
-  const { user_id, date_diary } = req.body;
+  const { date_diary } = req.body;
 
   const diary = await Diary.destroy({
-    where: { user_id, date_diary },
+    where: { date_diary },
   });
 
   return res.status(200).json({ message: "Xoá thành công" });
@@ -73,9 +73,9 @@ module.exports.deleteDiaryByDate = async (req, res) => {
 
 // Sửa nhật ký theo id
 module.exports.updateDiary = (req, res) => {
-  const { user_id, diary_id } = req.body;
+  const { diary_id } = req.body;
 
-  Diary.findOne({ where: { user_id, diary_id } })
+  Diary.findOne({ where: { diary_id } })
     .then((diary) => {
       Object.keys(req.body).forEach((key) => {
         diary[key] = req.body[key];

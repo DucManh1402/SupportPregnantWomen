@@ -35,10 +35,10 @@ module.exports.getAllSchedule = async (req, res) => {
 
 // Lấy lịch khám theo ngày tái khám
 module.exports.getScheduleByDate = async (req, res) => {
-  const { user_id, ngay_tai_kham } = req.body;
+  const { ngay_tai_kham } = req.body;
 
   const schedule = await Schedule.findOne({
-    where: { user_id, ngay_tai_kham },
+    where: { ngay_tai_kham },
   });
 
   const rawData = JSON.parse(JSON.stringify(schedule, null, 4));
@@ -61,10 +61,10 @@ module.exports.getScheduleByID = async (req, res) => {
 
 // Xoá lịch khám theo ngày
 module.exports.deleteSchedule = async (req, res) => {
-  const { user_id, schedule_id } = req.body;
+  const { schedule_id } = req.body;
 
   const schedule = await Schedule.destroy({
-    where: { user_id, schedule_id },
+    where: { schedule_id },
   });
 
   return res.status(200).json({ message: "Xoá thành công" });
@@ -72,9 +72,9 @@ module.exports.deleteSchedule = async (req, res) => {
 
 // Sửa lịch khám theo id
 module.exports.updateSchedule = (req, res) => {
-  const { user_id, schedule_id } = req.body;
+  const { schedule_id } = req.body;
 
-  Schedule.findOne({ where: { user_id, schedule_id } })
+  Schedule.findOne({ where: { schedule_id } })
     .then((schedule) => {
       Object.keys(req.body).forEach((key) => {
         schedule[key] = req.body[key];
