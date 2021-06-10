@@ -10,7 +10,7 @@
     <color name="colorSearchIcon">#bdbdbd</color>
     <color name="colorTextHint">#7b7b7b</color>
     <color name="colorQuickActionB">#2f2d2e</color>
-    <color name="colorIcon">#a4a4a4</color>
+    <color name="colorIcon">#FFC0CB</color>
     <color name="colorTextSubtitle">#CECECE</color>
     <color name="colorDefaultNoteColor">#333333</color>
     <color name="colorNoteSubtitleText">#FAFAFA</color>
@@ -18,7 +18,7 @@
     <color name="colorNoteColor2">#FDBE3B</color>
     <color name="colorNoteColor3">#FF4842</color>
     <color name="colorNoteColor4">#3A52FC</color>
-    <color name="colorNoteColor5">#000000</color>
+    <color name="colorNoteColor5">#D386FC</color>
     <color name="colorDelete">#FF4842</color>
     <color name="colorSearchBackground">#333333</color>
 

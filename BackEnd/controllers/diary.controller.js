@@ -61,7 +61,7 @@ module.exports.getDiaryByID = async (req, res) => {
 };
 
 // Xoá nhật ký theo ngày
-module.exports.deleteDiary = async (req, res) => {
+module.exports.deleteDiaryByDate = async (req, res) => {
   const { diary_id } = req.body;
 
   const diary = await Diary.destroy({

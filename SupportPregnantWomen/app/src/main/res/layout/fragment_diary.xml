@@ -103,7 +103,7 @@
             android:layout_width="@dimen/_23sdp"
             android:layout_height="@dimen/_23sdp"
             android:contentDescription="@string/app_name"
-            android:src="@drawable/ic_add_black"
+            android:src="@drawable/ic_round_add"
             app:tint="@color/colorIcon" />
         <ImageView
             android:id="@+id/image_diary"
@@ -111,7 +111,7 @@
             android:layout_height="@dimen/_23sdp"
             android:layout_marginLeft="@dimen/_15sdp"
             android:contentDescription="@string/app_name"
-            android:src="@drawable/ic_image_black"
+            android:src="@drawable/ic_outline_image"
             app:tint="@color/colorIcon" />
         <ImageView
             android:id="@+id/web_diary"
@@ -119,7 +119,7 @@
             android:layout_height="@dimen/_23sdp"
             android:layout_marginLeft="@dimen/_15sdp"
             android:contentDescription="@string/app_name"
-            android:src="@drawable/ic_web_link"
+            android:src="@drawable/ic_round_language"
             app:tint="@color/colorIcon" />
     </LinearLayout>
 

@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -15,6 +16,7 @@ import com.example.test.Model.Diary;
 import com.example.test.Model.GlobalsUser;
 import com.example.test.NguonApi;
 import com.example.test.R;
+import com.google.android.material.bottomsheet.BottomSheetBehavior;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -45,7 +47,7 @@ public class AddDiaryActivity extends AppCompatActivity {
         textDateTime = findViewById(R.id.texDateTime);
 
         textDateTime.setText(
-                new SimpleDateFormat("EEEE, dd MMMM yyyy HH:mm a", Locale.getDefault())
+                new SimpleDateFormat("dd MMMM yyyy", Locale.getDefault())
                 .format(new Date())
         );
 
@@ -61,6 +63,7 @@ public class AddDiaryActivity extends AppCompatActivity {
                 hashNote();
             }
         });
+       // initMis();
     }
     private void hashNote() {
         testnote();
@@ -98,4 +101,21 @@ public class AddDiaryActivity extends AppCompatActivity {
             return;
         }
     }
+    //đổi màu
+    private void initMis(){
+        final LinearLayout layoutMis = findViewById(R.id.layoutTableColorDiary);
+        final BottomSheetBehavior<LinearLayout> bottomSheetBehavior = BottomSheetBehavior.from(layoutMis);
+        layoutMis.findViewById(R.id.textMiscel).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(bottomSheetBehavior.getState() != BottomSheetBehavior.STATE_EXPANDED){
+                    bottomSheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
+                }else {
+                    bottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
+                }
+            }
+        });
+
+    }
+
 }

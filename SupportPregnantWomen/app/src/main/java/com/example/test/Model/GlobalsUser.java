@@ -20,4 +20,6 @@ public class GlobalsUser {
     public static void setNumber_Co(int number_Co) {
         Number_Co = number_Co;
     }
+
+
 }

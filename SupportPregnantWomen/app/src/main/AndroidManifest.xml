@@ -27,6 +27,7 @@
         <activity android:name=".Controller.Edit_thongtin_user" />
         <activity android:name=".Controller.EditBabyActivity" />
         <activity android:name=".Controller.AddDiaryActivity"/>
+        <activity android:name=".Controller.EditDiary"/>
         <activity android:name=".Controller.DiaryFragment"/>
 
         <meta-data

@@ -19,6 +19,8 @@ public class Diary {
     private String content;
     @SerializedName("date_diary")
     private String date_diary;
+    @SerializedName("list")
+    private List<Diary> list ;
 
     public Diary(String user_id, String diary_id, String title, String subtitle, String content, String date_diary) {
         this.user_id = user_id;
@@ -30,6 +32,16 @@ public class Diary {
     }
 
     public Diary() {
+    }
+
+    public Diary(String user_id, String diary_id, String title, String subtitle, String content, String date_diary, List<Diary> list) {
+        this.user_id = user_id;
+        this.diary_id = diary_id;
+        this.title = title;
+        this.subtitle = subtitle;
+        this.content = content;
+        this.date_diary = date_diary;
+        this.list = list;
     }
 
     public String getUser_id() {
@@ -80,12 +92,11 @@ public class Diary {
         this.subtitle = subtitle;
     }
 
-    public Diary(String user_id, String diary_id, String title, String subtitle, String content, String date_diary, Image image_diary, List<Diary> diaries) {
-        this.user_id = user_id;
-        this.diary_id = diary_id;
-        this.title = title;
-        this.subtitle = subtitle;
-        this.content = content;
-        this.date_diary = date_diary;
+    public List<Diary> getList() {
+        return list;
+    }
+
+    public void setList(List<Diary> list) {
+        this.list = list;
     }
 }

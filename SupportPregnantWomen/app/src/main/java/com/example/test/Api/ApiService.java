@@ -48,10 +48,13 @@ public interface ApiService {
 
     //lấy all nhật kí
     @POST("api/diaries/get-diaries")
-    Call<List<Diary>> getDiaries(@Body HashMap<String, String>map);
-//    Call<Diary> getDiaries(@Body HashMap<String, String>map);
+    Call<Diary> getDiaries(@Body HashMap<String, String>map);
 
-    //lấy 1 nhật kí
+    //lấy 1 nhật ki
+    @POST("api/diaries/get-diaryid")
+    Call<Diary> getDiaryById(@Body HashMap<String, String>map);
+
+    //lấy nhật kí theo ngày
     @POST("api/diaries/get-diary")
     Call<Diary> getDiary_Day(@Body HashMap<String, String>map);
 
